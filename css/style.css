@@ -1,0 +1,97 @@
+body {
+  font-family: arial;
+  font-size: 12px;
+  color: #1e5474;
+  background: #f7f7f7;
+  margin: 0px;
+}
+
+#container {
+  /* width: auto; */
+  /* height: auto; */
+  /* margin: uto; */
+}
+
+#container #header #menu {
+  background: #1e5474;
+  padding: 16px 10px;
+  overflow: hidden;
+}
+
+#container #header #menu #user {
+  float: left;
+}
+
+#container #header #menu #user a {
+  color: white;
+  padding-right: 5px;
+  text-decoration: none;
+}
+
+#container #footer {
+  background: #1e5474;
+  padding: 10px;
+  width: auto;
+  height: auto;
+}
+
+#container #footer p {
+  color: white;
+  text-align: center;
+  font-size: 10px;
+  font-style: italic;
+  margin-bottom: 0px;
+}
+
+#container #content {
+  padding: 10px 0px;
+  overflow: hidden;
+  margin-bottom: 58px;
+}
+
+#container-user-akses {
+  width: 350px;
+  height: auto;
+  margin: 50px auto;
+}
+
+.element-form {
+  margin-bottom: 15px;
+}
+
+.element-form label {
+  display: block;
+  font-weight: bold;
+}
+
+.element-form span {
+  display: block;
+}
+
+.element-form span input[type="text"], .element-form span input[type="password"], .element-form span textarea, .element-form span select {
+  width: 100%;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+.element-form span input[type="submit"] {
+  background: #1e5474;
+  border: none;
+  color: white;
+  padding: 7px 20px;
+  border-radius: 3px;
+  font-size: 9px;
+  cursor: pointer;
+}
+
+.element-form span input[type="submit"]:hover {
+  background: orange;
+}
+
+.notif {
+  background: #1e5474;
+  color: white;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: 11px;
+}

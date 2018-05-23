@@ -1,7 +1,12 @@
 <?php
+
+  session_start();
   include_once("./function/helper.php");
 
   $page = isset($_GET['page']) ? $_GET['page'] : false;
+
+  $guest_id = isset($_SESSION['guest_id']) ? $_SESSION['guest_id'] : false;
+  $nama = isset($_SESSION['nama']) ? $_SESSION['nama'] : false;
 
  ?>
 
@@ -17,8 +22,16 @@
        <div id ="header">
          <div id="menu">
            <div id="user">
-             <a href="<?php echo BASE_URL."index.php?page=login"; ?>">Login</a>
-             <a href="<?php echo BASE_URL."index.php?page=register"; ?>">Register</a>
+             <?php
+                if ($guest_id) {
+                  echo "Hai <b>$nama</b>,
+                        <a href='".BASE_URL."index.php?page=my_profile'>My Profile</a>
+                        <a href='".BASE_URL."logout.php'>Logout</a>";
+                } else{
+                  echo "<a href='".BASE_URL."index.php?page=login'>Login</a>
+                  <a href='".BASE_URL."index.php?page=register'>Register</a>";
+                }
+             ?>
            </div>
          </div>
        </div>
@@ -37,6 +50,5 @@
          <p>copyright resto 2018</p>
        </div>
      </div>
-
    </body>
  </html>

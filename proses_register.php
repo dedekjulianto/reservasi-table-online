@@ -21,7 +21,7 @@
   } else if(mysqli_num_rows($query) == 1) {
     header("location: ".BASE_URL."index.php?page=register&notif=email&$dataForm");
   } else {
-    $password = password_hash($password, PASSWORD_DEFAULT);
+    $password = md5($password);
     mysqli_query($koneksi, "INSERT INTO guests (nama, email, phone, alamat, password)
                                         VALUES ('$nama_lengkap', '$email', '$phone', '$alamat', '$password')
                             ");

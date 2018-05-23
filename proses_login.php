@@ -14,6 +14,6 @@
     session_start();
     $_SESSION['guest_id'] = $row['guest_id'];
     $_SESSION['nama'] = $row['nama'];
-    header("location:".BASE_URL."index.php?page=my_profile");
+    header("location:".BASE_URL."index.php?page=myprofile");
   }
- ?>
+?>

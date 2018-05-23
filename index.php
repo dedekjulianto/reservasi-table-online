@@ -25,11 +25,13 @@
              <?php
                 if ($guest_id) {
                   echo "Hai <b>$nama</b>,
-                        <a href='".BASE_URL."index.php?page=my_profile'>My Profile</a>
+                        <a href='".BASE_URL."index.php?page=myprofile'>My Profile</a>
+                        <a href='".BASE_URL."index.php?page=home'>Home</a>
                         <a href='".BASE_URL."logout.php'>Logout</a>";
                 } else{
-                  echo "<a href='".BASE_URL."index.php?page=login'>Login</a>
-                  <a href='".BASE_URL."index.php?page=register'>Register</a>";
+                  echo "<a href='".BASE_URL."index.php?page=home'>Home</a>
+                        <a href='".BASE_URL."index.php?page=login'>Login</a>
+                        <a href='".BASE_URL."index.php?page=register'>Register</a>";
                 }
              ?>
            </div>

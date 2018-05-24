@@ -5,6 +5,7 @@
   include_once("./function/helper.php");
 
   $page = isset($_GET['page']) ? $_GET['page'] : false;
+  $tipe_id = isset($_GET['tipe_id']) ? $_GET['tipe_id'] : false;
 
   $guest_id = isset($_SESSION['guest_id']) ? $_SESSION['guest_id'] : false;
   $nama = isset($_SESSION['nama']) ? $_SESSION['nama'] : false;

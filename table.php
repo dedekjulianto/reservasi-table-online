@@ -4,7 +4,12 @@
       <?php
         $query = mysqli_query($koneksi, "SELECT * FROM tipe_meja WHERE status='on'");
         while ($row=mysqli_fetch_assoc($query)) {
-          echo "<li><a href='".BASE_URL."index.php?tipe_id=$row[tipe_id]'>$row[tipe]</a></li>";
+          if ($tipe_id == $row['tipe_id']) {
+            echo "<li><a href='".BASE_URL."index.php?tipe_id=$row[tipe_id]' class='active'>$row[tipe]</a></li>";
+          } else {
+            echo "<li><a href='".BASE_URL."index.php?tipe_id=$row[tipe_id]'>$row[tipe]</a></li>";
+          }
+
         }
        ?>
     </ul>
@@ -15,7 +20,12 @@
   <div id="frame-table">
     <ul>
       <?php
-        $query = mysqli_query($koneksi, "SELECT * FROM meja WHERE status='on'");
+        if ($tipe_id) {
+          $query = mysqli_query($koneksi, "SELECT * FROM meja WHERE status='on' AND tipe_id='$tipe_id'");
+        } else {
+          $query = mysqli_query($koneksi, "SELECT * FROM meja WHERE status='on'");
+        }
+
         $no=1;
         while ($row=mysqli_fetch_assoc($query)) {
           $style=false;

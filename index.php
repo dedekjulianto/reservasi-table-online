@@ -1,6 +1,7 @@
 <?php
 
   session_start();
+  include_once("./function/koneksi.php");
   include_once("./function/helper.php");
 
   $page = isset($_GET['page']) ? $_GET['page'] : false;
@@ -26,10 +27,10 @@
                 if ($guest_id) {
                   echo "Hai <b>$nama</b>,
                         <a href='".BASE_URL."index.php?page=myprofile'>My Profile</a>
-                        <a href='".BASE_URL."index.php?page=home'>Home</a>
+                        <a href='".BASE_URL."index.php?page=table'>Table</a>
                         <a href='".BASE_URL."logout.php'>Logout</a>";
                 } else{
-                  echo "<a href='".BASE_URL."index.php?page=home'>Home</a>
+                  echo "<a href='".BASE_URL."index.php?page=table'>Table</a>
                         <a href='".BASE_URL."index.php?page=login'>Login</a>
                         <a href='".BASE_URL."index.php?page=register'>Register</a>";
                 }
@@ -44,7 +45,7 @@
           if (file_exists($filename)) {
             include_once($filename);
           } else {
-            echo "Maaf file tersebut tidak ada didalam sistem";
+            include_once("table.php");
           }
          ?>
        </div>

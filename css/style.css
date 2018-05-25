@@ -105,6 +105,7 @@ body {
   float: left;
   width: 245px;
   background: #1e5474;
+  margin-bottom:10px;
 }
 
 #menu-profile ul {
@@ -249,4 +250,44 @@ body {
 #tipe-table ul li a:hover,
 #tipe-table ul li a.active {
   background: #e8e8e8;
+}
+
+
+.reserveBarang {
+    font-size:  10px;
+    font-weight:  bold;
+    vertical-align: super;
+}
+
+
+.table-list {
+    width: 100%;
+    border-collapse:  collapse;
+}
+
+.table-list tr.baris-title {
+    background: #e6e6e6;
+}
+
+
+.table-list tr th,
+.table-list tr td {
+    padding:  10px 7px;
+}
+
+.kolom-nomor {
+    width: 20px;
+    text-align:  center;
+}
+
+.kiri {
+    text-align: center;
+}
+
+.tengah {
+    text-align: center;
+}
+
+.kanan {
+    text-align: right;
 }

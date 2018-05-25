@@ -1,6 +1,5 @@
 <div id="frame-data-pemesan">
   <h3 class="label-data-pemesan">Detail Reserve Table</h3>
-
   <div id="frame-form-pengirim">
     <form action="<?php echo BASE_URL."proses_pemesan.php"; ?>" method="post">
       <div class="element-form">
@@ -43,7 +42,7 @@
                   <td class='kiri'>$noMeja</td>
                   <td class='tengah'>$kapasitas</td>
                   <td class='kanan'>$tipeMeja</td>
-          ";
+                ";
         }
        ?>
     </table>

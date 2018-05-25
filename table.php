@@ -46,7 +46,6 @@
                     <a href='".BASE_URL."reserve_table.php?meja_id=$row[meja_id]'>RESERVE</a>
                   </div>
                 </li>";
-
           $no++;
         }
        ?>

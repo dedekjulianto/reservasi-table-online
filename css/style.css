@@ -308,31 +308,29 @@ body {
   float: right;
 }
 
-
 #frame-data-pemesan {
-    float: left;
-    width: 600px;
-    margin-right:  20px;
-    margin-left:  10px;
+  float: left;
+  width: 600px;
+  margin-right: 20px;
+  margin-left: 10px;
 }
 
 #frame-data-detail {
-    float: left;
-    width: 660px;
+  float: left;
+  width: 660px;
 }
 
 #frame-detail-reserve {
-    border: 1px solid grey;
+  border: 1px solid grey;
 }
 
 #frame-form-pengirim {
-    border:  1px solid grey;
-    padding:  25px;
+  border: 1px solid grey;
+  padding: 25px;
 }
 
-
 h3.label-data-pemesan {
-    border: 1px solid grey;
-    padding:  10px 7px;
-    margin:  0px;
+  border: 1px solid grey;
+  padding: 10px 7px;
+  margin: 0px;
 }

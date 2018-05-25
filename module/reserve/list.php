@@ -1,5 +1,4 @@
 <?php
-
   if ($totalReserve == 0) {
     echo "<h3>Saat ini belum ada pesanan table anda</h3>";
   } else {
@@ -18,7 +17,6 @@
       $noMeja = $value["nomor"];
       $kapasitas = $value["kapasitas"];
       $tipeMeja = $value["tipe_id"];
-
       echo "<tr>
               <td class='kolom-nomor'>$no."."</td>
               <td class='kiri'>$noMeja</td>
@@ -27,7 +25,6 @@
             </tr>";
       $no++;
     }
-
     echo "</table>";
 
     echo "<div id='frame-button'>

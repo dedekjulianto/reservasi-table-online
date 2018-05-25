@@ -1,5 +1,4 @@
 <?php
-
   session_start();
   include_once("./function/koneksi.php");
   include_once("./function/helper.php");
@@ -11,9 +10,7 @@
   $nama = isset($_SESSION['nama']) ? $_SESSION['nama'] : false;
   $reserve = isset($_SESSION['reserve']) ? $_SESSION['reserve'] : array();
   $totalReserve = count($reserve);
-
  ?>
-
  <!DOCTYPE html>
  <html>
    <head>

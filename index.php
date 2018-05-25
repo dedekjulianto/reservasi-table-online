@@ -9,7 +9,7 @@
 
   $guest_id = isset($_SESSION['guest_id']) ? $_SESSION['guest_id'] : false;
   $nama = isset($_SESSION['nama']) ? $_SESSION['nama'] : false;
-  $reserve = isset($_SESSION['reserve']) ? $_SESSION['reserve'] : false;
+  $reserve = isset($_SESSION['reserve']) ? $_SESSION['reserve'] : array();
   $totalReserve = count($reserve);
 
  ?>

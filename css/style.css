@@ -6,7 +6,11 @@ body {
   margin: 0px;
 }
 
-#container {}
+#container {
+  /* width: auto; */
+  /* height: auto; */
+  /* margin: uto; */
+}
 
 #container #header #menu {
   background: #1e5474;
@@ -258,6 +262,10 @@ body {
   border-collapse: collapse;
 }
 
+.table-list tr {
+  border-bottom: 1px solid #1e5474;
+}
+
 .table-list tr.baris-title {
   background: #e6e6e6;
 }
@@ -281,4 +289,50 @@ body {
 
 .kanan {
   text-align: right;
+}
+
+#frame-button a {
+  background: #1e5474;
+  color: white;
+  text-decoration: none;
+  padding: 7px 20px;
+  display: inline-block;
+  margin-top: 15px;
+}
+
+#pilih-table {
+  float: left;
+}
+
+#reserve-table {
+  float: right;
+}
+
+
+#frame-data-pemesan {
+    float: left;
+    width: 600px;
+    margin-right:  20px;
+    margin-left:  10px;
+}
+
+#frame-data-detail {
+    float: left;
+    width: 660px;
+}
+
+#frame-detail-reserve {
+    border: 1px solid grey;
+}
+
+#frame-form-pengirim {
+    border:  1px solid grey;
+    padding:  25px;
+}
+
+
+h3.label-data-pemesan {
+    border: 1px solid grey;
+    padding:  10px 7px;
+    margin:  0px;
 }

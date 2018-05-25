@@ -1,3 +1,3 @@
 # reservasi-table-online
 ---
-![screenshot](./images/booking_table.jpg)
+![screenshot](images/booking_table.jpg)

@@ -6,11 +6,7 @@ body {
   margin: 0px;
 }
 
-#container {
-  /* width: auto; */
-  /* height: auto; */
-  /* margin: uto; */
-}
+#container {}
 
 #container #header #menu {
   background: #1e5474;
@@ -105,7 +101,7 @@ body {
   float: left;
   width: 245px;
   background: #1e5474;
-  margin-bottom:10px;
+  margin-bottom: 10px;
 }
 
 #menu-profile ul {
@@ -247,47 +243,42 @@ body {
   text-decoration: none;
 }
 
-#tipe-table ul li a:hover,
-#tipe-table ul li a.active {
+#tipe-table ul li a:hover, #tipe-table ul li a.active {
   background: #e8e8e8;
 }
 
-
 .reserveBarang {
-    font-size:  10px;
-    font-weight:  bold;
-    vertical-align: super;
+  font-size: 10px;
+  font-weight: bold;
+  vertical-align: super;
 }
 
-
 .table-list {
-    width: 100%;
-    border-collapse:  collapse;
+  width: 100%;
+  border-collapse: collapse;
 }
 
 .table-list tr.baris-title {
-    background: #e6e6e6;
+  background: #e6e6e6;
 }
 
-
-.table-list tr th,
-.table-list tr td {
-    padding:  10px 7px;
+.table-list tr th, .table-list tr td {
+  padding: 10px 7px;
 }
 
 .kolom-nomor {
-    width: 20px;
-    text-align:  center;
+  width: 20px;
+  text-align: center;
 }
 
 .kiri {
-    text-align: center;
+  text-align: center;
 }
 
 .tengah {
-    text-align: center;
+  text-align: center;
 }
 
 .kanan {
-    text-align: right;
+  text-align: right;
 }

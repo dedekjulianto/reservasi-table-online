@@ -11,9 +11,6 @@
   <div id="menu-profile">
     <ul>
       <li>
-        <a <?php if($module=="table"){ echo "class='active'"; } ?> href="<?php echo BASE_URL."index.php?page=table"; ?>">Table</a>
-      </li>
-      <li>
         <a <?php if($module=="reserve"){ echo "class='active'"; } ?> href="<?php echo BASE_URL."index.php?page=myprofile&module=reserve&action=list"; ?>">Reserve
           <?php
             if($totalReserve != 0) {

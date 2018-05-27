@@ -16,12 +16,13 @@
 
       $noMeja = $value["nomor"];
       $kapasitas = $value["kapasitas"];
-      $tipeMeja = $value["tipe_id"];
+      $tipe = $value["tipe"];
+      // $tipeMeja = $value["tipe_id"];
       echo "<tr>
               <td class='kolom-nomor'>$no."."</td>
               <td class='kiri'>$noMeja</td>
               <td class='tengah'>$kapasitas</td>
-              <td class='tengah'>$tipeMeja</td>
+              <td class='tengah'>$tipe</td>
             </tr>";
       $no++;
     }

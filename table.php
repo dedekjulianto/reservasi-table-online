@@ -2,7 +2,8 @@
   <div id="tipe-table">
     <ul>
       <?php
-        $query = mysqli_query($koneksi, "SELECT * FROM tipe_meja");
+      $query = mysqli_query($koneksi, "SELECT * FROM tipe_meja");
+        echo "<li><a href='".BASE_URL."index.php?page=table'>All Table</a></li>";
         while ($row=mysqli_fetch_assoc($query)) {
           if ($tipe_id == $row['tipe_id']) {
             echo "<li><a href='".BASE_URL."index.php?tipe_id=$row[tipe_id]' class='active'>Room $row[tipe]</a></li>";

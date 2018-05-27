@@ -36,7 +36,7 @@
 
           $noMeja = $value['nomor'];
           $kapasitas = $value['kapasitas'];
-          $tipeMeja = $value['tipe_id'];
+          $tipeMeja = $value['tipe'];
 
           echo "<tr>
                   <td class='kiri'>$noMeja</td>

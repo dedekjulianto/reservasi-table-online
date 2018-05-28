@@ -14,6 +14,10 @@
     session_start();
     $_SESSION['guest_id'] = $row['guest_id'];
     $_SESSION['nama'] = $row['nama'];
-    header("location:".BASE_URL."index.php?page=myprofile");
+    if (isset($_SESSION["proses_pemesan"])) {
+      header("location:".BASE_URL."index.php?page=myprofile&module=reserve&action=list");
+    } else {
+      header("location:".BASE_URL."index.php?page=myprofile");
+    }
   }
 ?>

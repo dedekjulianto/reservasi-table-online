@@ -26,8 +26,8 @@
              <?php
                 if ($guest_id) {
                   echo "Hai <b>$nama</b>,
-                        <a href='".BASE_URL."index.php?page=myprofile'>My Profile</a>
                         <a href='".BASE_URL."index.php?page=table'>Table</a>
+                        <a href='".BASE_URL."index.php?page=myprofile'>My Profile</a>
                         <a href='".BASE_URL."logout.php'>Logout</a>";
                 } else{
                   echo "<a href='".BASE_URL."index.php?page=table'>Table</a>

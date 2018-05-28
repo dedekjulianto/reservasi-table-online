@@ -300,6 +300,10 @@ body {
   margin-top: 15px;
 }
 
+#frame-button a:hover {
+  background: orange;
+}
+
 #pilih-table {
   float: left;
 }

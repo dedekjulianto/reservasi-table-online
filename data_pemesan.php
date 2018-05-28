@@ -1,3 +1,10 @@
+<?php
+  if ($guest_id == false) {
+    $_SESSION["proses_pemesan"] = true;
+    header("location: ".BASE_URL."index.php?page=login");
+    exit;
+  }
+?>
 <div id="frame-data-pemesan">
   <h3 class="label-data-pemesan">Detail Reserve Table</h3>
   <div id="frame-form-pengirim">
@@ -9,6 +16,10 @@
       <div class="element-form">
         <label>Nomor Telepon</label>
         <span><input type="text" name="nomor_telepon" /></span>
+      </div>
+      <div class="element-form">
+        <label>Jumlah Orang</label>
+        <span><input type="text" name="jumlah" /></span>
       </div>
       <div class="element-form">
         <label>Alamat</label>

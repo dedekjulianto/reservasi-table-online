@@ -20,7 +20,7 @@
         </a>
       </li>
       <li>
-        <a <?php if($module=="invoice"){ echo "class='active'"; } ?> href="<?php echo BASE_URL."index.php?page=myprofile&module=invoice&action=list"; ?>">Invoice</a>
+        <a <?php if($module=="invoice"){ echo "class='active'"; } ?> href="<?php echo BASE_URL."index.php?page=myprofile&module=invoice&action=detail"; ?>">Invoice</a>
       </li>
     </ul>
   </div>

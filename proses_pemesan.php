@@ -30,7 +30,7 @@
                                           VALUES ('$last_pesanan_id', '$meja_id', '$nomor', '$kapasitas', '$tipeMeja')");
     }
     unset($_SESSION["reserve"]);
-    header("location:".BASE_URL."index.php?page=myprofile&module=reserve&action=detail&reserve_id=$last_pesanan_id");
-  } 
+    header("location:".BASE_URL."index.php?page=myprofile&module=invoice&action=detail&reserve_id=$last_pesanan_id");
+  }
 
 ?>

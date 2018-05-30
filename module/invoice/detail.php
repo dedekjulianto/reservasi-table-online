@@ -14,9 +14,7 @@
 ?>
 <div ="frame-faktur">
   <h3><center>Detail Order</center></h3>
-
   <hr/>
-
   <table>
     <tr>
       <td>Nomor Faktur</td>
@@ -50,4 +48,33 @@
       <td><?php echo $tanggal_pesan ?></td>
     </tr>
   </table>
+</div>
+
+  <table class="table-list">
+    <tr class="baris-title">
+      <th>No.</th>
+      <th>Nomor Meja</th>
+      <th>Kapasitas</th>
+      <th>Tipe Meja</th>
+    </tr>
+  <?php
+    $queryDetail = mysqli_query($koneksi, "SELECT * FROM invoice WHERE reserve_id='$reserve_id'");
+
+    $no=1;
+    while ($rowDetail=mysqli_fetch_assoc($queryDetail)) {
+      echo "<tr class='tengah'>
+              <td>$no</td>
+              <td>$rowDetail[nomor]</td>
+              <td>$rowDetail[kapasitas]</td>
+              <td>$rowDetail[tipe]</td>
+            </tr>";
+      $no++;
+    }
+  ?>
+</table>
+
+<div id="frmae-keterangan">
+  <p>Silahkan datang tepat waktu<br/>
+     Customer Service : 0000-9999-8888<br/>
+  </p>
 </div>

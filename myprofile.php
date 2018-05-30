@@ -6,6 +6,7 @@
   } else {
     header("location:".BASE_URL."index.php?page=login");
   }
+
  ?>
 <div id="bg-page-profile">
   <div id="menu-profile">
@@ -20,7 +21,7 @@
         </a>
       </li>
       <li>
-        <a <?php if($module=="invoice"){ echo "class='active'"; } ?> href="<?php echo BASE_URL."index.php?page=myprofile&module=invoice&action=detail"; ?>">Invoice</a>
+        <a <?php if($module=="invoice"){ echo "class='active'"; } ?> href="<?php echo BASE_URL."index.php?page=myprofile&module=invoice&action=list"; ?>">Invoice</a>
       </li>
     </ul>
   </div>

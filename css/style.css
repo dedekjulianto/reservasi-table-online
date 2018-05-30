@@ -131,7 +131,7 @@ body {
 
 #profile-content {
   float: left;
-  width: 1100px;
+  width: 1085px;
   padding: 10px;
   background: white;
 }
@@ -338,7 +338,6 @@ h3.label-data-pemesan {
   padding: 10px 7px;
   margin: 0px;
 }
-
 
 .tombol-action {
     background:  #1e5474;

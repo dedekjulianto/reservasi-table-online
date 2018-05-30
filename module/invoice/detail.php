@@ -1,5 +1,4 @@
 <?php
-
   $reserve_id = $_GET["reserve_id"];
 
   $query = mysqli_query($koneksi, "SELECT pesanan.reserve_id, pesanan.nama_pemesan, pesanan.nomor_telepon, pesanan.alamat, pesanan.tanggal_pesan, guests.nama FROM pesanan JOIN guests ON pesanan.guest_id=guests.guest_id WHERE pesanan.reserve_id='$reserve_id'");
@@ -73,7 +72,7 @@
   ?>
 </table>
 
-<div id="frmae-keterangan">
+<div id="frame-keterangan">
   <p>Silahkan datang tepat waktu<br/>
      Customer Service : 0000-9999-8888<br/>
   </p>

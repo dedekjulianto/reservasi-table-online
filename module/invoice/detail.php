@@ -58,7 +58,7 @@
       <th>Tipe Meja</th>
     </tr>
   <?php
-    $queryDetail = mysqli_query($koneksi, "SELECT * FROM invoice WHERE reserve_id='$reserve_id'");
+    $queryDetail = mysqli_query($koneksi, "SELECT invoice.*, meja.nomor FROM invoice JOIN meja ON invoice.meja_id=meja.meja_id WHERE reserve_id='$reserve_id'");
 
     $no=1;
     while ($rowDetail=mysqli_fetch_assoc($queryDetail)) {

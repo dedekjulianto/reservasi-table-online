@@ -6,7 +6,12 @@
   $page = isset($_GET['page']) ? $_GET['page'] : false;
   $tipe_id = isset($_GET['tipe_id']) ? $_GET['tipe_id'] : false;
 
-  $guest_id = isset($_SESSION['guest_id']) ? $_SESSION['guest_id'] : false;
+
+
+  $meja_id = isset($_SESSION['meja_id']) ? $_SESSION['meja_id'] : false;
+
+  $guest_id = isset($_SESSION['tamu_id']) ? $_SESSION['tamu_id'] : false;
+  $level = isset($_SESSION['level']) ? $_SESSION['level'] : false;
   $nama = isset($_SESSION['nama']) ? $_SESSION['nama'] : false;
   $reserve = isset($_SESSION['reserve']) ? $_SESSION['reserve'] : array();
   $totalReserve = count($reserve);
@@ -17,6 +22,7 @@
      <meta charset="utf-8">
      <title>Resto | Reservasi Table</title>
      <link href="<?php echo BASE_URL."css/style.css"; ?>" type="text/css" rel="stylesheet" />
+     <script src="<?php echo BASE_URL."js/jquery-3.1.1.min.js"; ?>"></script>
    </head>
    <body>
      <div id="container">

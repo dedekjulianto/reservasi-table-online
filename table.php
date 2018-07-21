@@ -22,10 +22,15 @@
     <ul>
       <?php
         if ($tipe_id) {
-          $query = mysqli_query($koneksi, "SELECT meja.*, tipe_meja.tipe FROM meja JOIN tipe_meja ON meja.tipe_id=tipe_meja.tipe_id AND meja.tipe_id='$tipe_id'");
+          $query = mysqli_query($koneksi, "SELECT * FROM meja WHERE status='on' AND meja.tipe_id='$tipe_id' ");
         } else {
-          $query = mysqli_query($koneksi, "SELECT meja.*, tipe_meja.tipe FROM meja JOIN tipe_meja ON meja.tipe_id=tipe_meja.tipe_id");
+          $query = mysqli_query($koneksi, "SELECT * FROM meja WHERE status='on'");
         }
+        // if ($tipe_id) {
+        //   $query = mysqli_query($koneksi, "SELECT meja.*, tipe_meja.tipe FROM meja WHERE status='on' JOIN tipe_meja ON meja.tipe_id=tipe_meja.tipe_id AND meja.tipe_id='$tipe_id'");
+        // } else {
+        //   $query = mysqli_query($koneksi, "SELECT meja.*, tipe_meja.tipe FROM meja WHERE status='on' JOIN tipe_meja ON meja.tipe_id=tipe_meja.tipe_id ");
+        // }
 
         $no=1;
         while ($row=mysqli_fetch_assoc($query)) {
@@ -41,7 +46,6 @@
                   </a>
                   <div class='keterangan'>
                     <p>Kapasitas $row[kapasitas]</p>
-                    <p>Tipe : $row[tipe]</p>
                     <span>Status : $row[status]</span>
                   </div>
                   <div class='reserve'>
@@ -55,3 +59,4 @@
     </ul>
   </div>
 </div>
+<!-- <p>Tipe : $row[tipe]</p> -->

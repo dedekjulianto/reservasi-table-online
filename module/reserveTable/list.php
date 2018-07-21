@@ -26,7 +26,7 @@
 
     echo "<div id='frame-button'>
             <a id='pilih-table' href='".BASE_URL."index.php?page=Table'>< Change Table</a>
-            <a id='reserve-table' href='".BASE_URL."index.php?page=data_pemesan'>Reserve Table ></a>
+            <a id='reserve-table' href='".BASE_URL."index.php?page=pemesan'>Lanjut Pemesanan ></a>
           </div>";
   }
 ?>

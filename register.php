@@ -28,7 +28,7 @@
       <span><input type="text" name="email" value="<?php echo $email; ?>" /></span>
     </div>
     <div class="element-form">
-      <label>Nomor Telepon</label>
+      <label>No Telepon/Handphone</label>
       <span><input type="text" name="phone" value="<?php echo $phone; ?>" /></span>
     </div>
     <div class="element-form">

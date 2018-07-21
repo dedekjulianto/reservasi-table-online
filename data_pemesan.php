@@ -1,9 +1,12 @@
 <?php
-  if ($guest_id == false) {
+  if ($guest_id == false ) {
     $_SESSION["proses_pemesan"] = true;
-    header("location: ".BASE_URL."index.php?page=login");
+    header("location: ".BASE_URL."index.php?page=myprofile");
     exit;
   }
+
+  $menu = isset($_SESSION['menu']) ? $_SESSION['menu'] : array();
+  $button = "Submit";
 ?>
 <div id="frame-data-pemesan">
   <h3 class="label-data-pemesan">Detail Reserve Table</h3>
@@ -26,36 +29,50 @@
         <span><textarea name="alamat"></textarea></span>
       </div>
       <div class="element-form">
-        <span><input type="submit" value="Submit" /></span>
+        <span><input type="submit" value="<?php echo $button; ?>" /></span>
       </div>
     </form>
   </div>
 </div>
 
 <div id="frame-data-detail">
-  <h3 class="label-data-pemesan">Detail Reserve</h3>
+  <h3 class="label-data-pemesan">Detail Reserve Menu</h3>
   <div id="frame-detail-reserve">
     <table class="table-list">
       <tr>
-        <th class="kiri">Nomor Meja</th>
-        <th class="tengah">Kapasitas</th>
-        <th class="kanan">Tipe Meja</th>
+        <th class="kiri">Nama Menu</th>
+        <th class="tengah">Qty</th>
+        <th class="kanan">Total</th>
       </tr>
+
       <?php
-        foreach ($reserve as $key => $value) {
-          $meja_id = $key;
+      $subTotal = 0;
+        foreach ($menu AS $key1 => $value1) {
+          $id_menu = $key1;
 
-          $noMeja = $value['nomor'];
-          $kapasitas = $value['kapasitas'];
-          $tipeMeja = $value['tipe'];
+          $nama_menu = $value1['nama_menu'];
+          $harga = $value1['harga'];
+          $quantity = $value1['quantity'];
 
+          $total = $quantity * $harga;
+          $subTotal = $subTotal + $total;
           echo "<tr>
-                  <td class='kiri'>$noMeja</td>
-                  <td class='tengah'>$kapasitas</td>
-                  <td class='kanan'>$tipeMeja</td>
-                ";
+                  <td class='kiri'>$nama_menu</td>
+                  <td class='tengah'>$quantity</td>
+                  <td class='kanan'>".rupiah($total)."</td>
+                </tr>";
         }
+        echo "<tr>
+                <td colspan='2' class='kanan'><b>Sub Total</b></td>
+                <td class='kanan'><b>".rupiah($subTotal)."</b></td>
+              </tr>";
+
+              if ($button == "Submit") {
+                  mysqli_query($koneksi, "UPDATE menu SET stok=stok-$quantity WHERE id_menu='$id_menu'");
+              }
        ?>
     </table>
   </div>
 </div>
+
+<?php

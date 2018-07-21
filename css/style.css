@@ -322,6 +322,7 @@ body {
 #frame-data-detail {
   float: left;
   width: 660px;
+  margin-bottom: 15px;
 }
 
 #frame-detail-reserve {
@@ -352,4 +353,118 @@ h3.label-data-pemesan {
 
 .tombol-action:hover {
   background: orange;
+}
+
+
+#menu #frame-menu ul {
+    list-style:  none;
+    margin: 0px;
+    padding:  0px;
+    overflow:  hidden;
+}
+
+#menu #frame-menu ul li {
+    width: 226px;
+    background: #f7f7f7;
+    padding: 10px 15px;
+    margin-bottom:  15px;
+    margin-right:  15px;
+    float:  left;
+}
+
+#menu #frame-menu ul li .price {
+    font-size:  15px;
+    font-weight:  bold;
+    text-align:  right;
+    margin-bottom: 10px;
+}
+
+#menu #frame-menu ul li a img {
+    display:  block;
+    width: 224px;
+}
+
+#menu #frame-menu ul li
+.keterangan-gambar {border-top: 1px solid;border-bottom:  1px solid;padding: 10px 0px;height:  50px;}
+
+#menu #frame-menu ul li .keterangan-gambar p {
+    text-align:  center;
+    margin:  5px 0px;
+    font-size: 18px;
+    font-weight:  bold;
+    color:  blue;
+}
+
+#menu #frame-menu ul li .keterangan-gambar p a {
+    font-weight:  bold;
+    text-decoration:  none;
+}
+
+#menu #frame-menu ul li .keterangan-gambar span {
+    display:  block;
+    text-align:  center;
+}
+
+#menu #frame-menu ul li .button-add {
+    text-align:  center;
+}
+
+#menu #frame-menu ul li .button-add a {
+    background:  #1e5474;
+    color:  white;
+    text-decoration:  none;
+    padding:  5px 10px;
+    display:  inline-block;
+    margin-top:  10px;
+    border-radius:  3px;
+}
+
+#menu #frame-menu ul li .button-add a:hover {
+  background: orange;
+}
+
+
+#frame-tambah {
+    margin-bottom:  10px;
+}
+
+
+#menu {
+    /* width: 840px; */
+    /* height:  auto; */
+    /* float:  left; */
+}
+
+
+.total-menu {
+    color:  white;
+    text-decoration:  none;
+    font-size:  10px;
+    font-weight:  bold;
+    vertical-align:  top;
+}
+
+
+.update-quantity {
+    width:  30px;
+    text-align:  center;
+}
+
+
+.kanan.hapus {
+    position:  relative;
+}
+
+.kanan.hapus a {
+    position:  absolute;
+    top: 0px;
+    right:  0px;
+    text-decoration:  none;
+    color:  #1e5474;
+}
+
+
+#menu #frame-menu ul li img {
+    margin-bottom:  10px;
+    width: 226px;
 }

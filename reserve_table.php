@@ -14,5 +14,5 @@
                              "tipe" => $row["tipe"]);
                              // "meja_id" => $row["meja_id"]);
   $_SESSION["reserve"] = $reserve;
-  header("location:".BASE_URL."index.php?page=myprofile&module=reserve&action=list");
+  header("location:".BASE_URL."index.php?page=myprofile&module=reserveTable&action=list");
 ?>

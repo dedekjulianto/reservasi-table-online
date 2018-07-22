@@ -21,8 +21,8 @@
         <span><input type="text" name="nomor_telepon" /></span>
       </div>
       <div class="element-form">
-        <label>Jumlah Orang</label>
-        <span><input type="text" name="jumlah" /></span>
+        <label>Tanggal Booking (format:yyyy-mm-dd)</label>
+        <span><input type="text" name="tanggal" /></span>
       </div>
       <div class="element-form">
         <label>Alamat</label>

@@ -1,7 +1,7 @@
 <?php
   $reserve_id = $_GET["reserve_id"];
 
-  $query = mysqli_query($koneksi, "SELECT pesanan.id_pesanan, pesanan.nama_pemesan, pesanan.nomor_telepon, pesanan.nomor_telepon, pesanan.alamat, pesanan.tanggal_pesan, users.nama FROM pesanan JOIN users ON pesanan.tamu_id=users.tamu_id WHERE pesanan.id_pesanan='$reserve_id'");
+  $query = mysqli_query($koneksi, "SELECT pesanan.id_pesanan, pesanan.nama_pemesan, pesanan.nomor_telepon, pesanan.nomor_telepon, pesanan.alamat, pesanan.tanggal_pesan, pesanan.tanggal, users.nama FROM pesanan JOIN users ON pesanan.tamu_id=users.tamu_id WHERE pesanan.id_pesanan='$reserve_id'");
 
   $row = mysqli_fetch_assoc($query);
 
@@ -10,8 +10,7 @@
   $nomor_telepon = $row['nomor_telepon'];
   $alamat = $row['alamat'];
   $nama = $row['nama'];
-  // $kapasitas = $row['kapasitas'];
-
+  $tanggal = $row['tanggal'];
 ?>
 <div ="frame-faktur">
   <h3><center>Detail Order</center></h3>
@@ -43,15 +42,15 @@
       <td>:</td>
       <td><?php echo $nama ?></td>
     </tr>
-    <!-- <tr>
-      <td>Kapasitas</td>
-      <td>:</td>
-      <td><?php echo $kapasitas ?></td>
-    </tr> -->
     <tr>
       <td>Tanggal Order</td>
       <td>:</td>
       <td><?php echo $tanggal_pesan ?></td>
+    </tr>
+    <tr>
+      <td>Tanggal Booking</td>
+      <td>:</td>
+      <td><?php echo $tanggal ?></td>
     </tr>
   </table>
 </div>

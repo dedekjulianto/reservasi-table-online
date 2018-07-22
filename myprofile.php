@@ -30,18 +30,14 @@
         }
        ?>
 
-       <?php
-       if ($level == "receptionist" || $level == "tamu") {
-       ?>
+       
         <li>
           <a <?php if($module=="invoice"){ echo "class='active'"; } ?> href="<?php echo BASE_URL."index.php?page=myprofile&module=invoice&action=list"; ?>">Invoice Menu</a>
         </li>
         <li>
           <a <?php if($module=="table"){ echo "class='active'"; } ?> href="<?php echo BASE_URL."index.php?page=myprofile&module=table&action=list"; ?>">Invoice Table</a>
         </li>
-        <?php
-          }
-         ?>
+
          <?php
             if ($level == "tamu") {
           ?>

@@ -11,19 +11,21 @@
         <span><input type="text" name="nomor_telepon" /></span>
       </div>
       <div class="element-form">
-        <label>Jumlah Orang</label>
-        <span><input type="text" name="jumlah" /></span>
+        <label>Tanggal Booking (format:yyyy-mm-dd)</label>
+        <span><input type="text" name="tanggal" /></span>
       </div>
       <div class="element-form">
         <label>Alamat</label>
         <span><textarea name="alamat"></textarea></span>
       </div>
       <div class="element-form">
-        <span><input type="submit" value="Submit" /></span>
+        <span><input type="submit" value="Submit" name="button" /></span>
       </div>
     </form>
   </div>
 </div>
+
+
 
 <div id="frame-data-detail">
   <h3 class="label-data-pemesan">Detail Reserve Table</h3>
@@ -52,3 +54,10 @@
     </table>
   </div>
 </div>
+
+<?php
+  $button = "Submit";
+  if ($button) {
+    $query = mysqli_query($koneksi, "UPDATE meja SET status='off' WHERE meja_id='$meja_id' ");
+  }
+ ?>

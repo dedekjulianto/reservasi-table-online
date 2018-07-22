@@ -1,12 +1,13 @@
 <?php
   $reserve_id = $_GET["reserve_id"];
-  $query = mysqli_query($koneksi, "SELECT pesan_table.id_pesanan, pesan_table.nama_pemesan, pesan_table.nomor_telepon, pesan_table.alamat, pesan_table.tanggal_pesan, users.nama FROM pesan_table JOIN users ON pesan_table.tamu_id=users.tamu_id WHERE pesan_table.id_pesanan='$reserve_id'");
+  $query = mysqli_query($koneksi, "SELECT pesan_table.id_pesanan, pesan_table.nama_pemesan, pesan_table.nomor_telepon, pesan_table.alamat, pesan_table.tanggal_pesan, pesan_table.tanggal, users.nama FROM pesan_table JOIN users ON pesan_table.tamu_id=users.tamu_id WHERE pesan_table.id_pesanan='$reserve_id'");
   $row = mysqli_fetch_assoc($query);
   $tanggal_pesan = $row['tanggal_pesan'];
   $nama_pemesan = $row['nama_pemesan'];
   $nomor_telepon = $row['nomor_telepon'];
   $alamat = $row['alamat'];
   $nama = $row['nama'];
+  $tanggal = $row['tanggal'];
 ?>
 <div ="frame-faktur">
   <h3><center>Detail Order</center></h3>
@@ -43,6 +44,11 @@
       <td>:</td>
       <td><?php echo $tanggal_pesan ?></td>
     </tr>
+    <tr>
+      <td>Tanggal Booking</td>
+      <td>:</td>
+      <td><?php echo $tanggal ?></td>
+    </tr>
   </table>
 </div>
 
@@ -71,6 +77,7 @@
 <div id="frame-keterangan">
   <p>Silahkan datang tepat waktu<br/>
      Customer Service : 0000-9999-8888<br/>
+     Silahkan lakukan pembatalan <a href="<?php echo BASE_URL."index.php?page=myprofile&module=table&action=status&id_pesanan=$row[id_pesanan]"?>">Disini</a>
   </p>
 </div>
 <div id="frame-tambah">

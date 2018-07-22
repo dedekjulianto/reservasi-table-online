@@ -1,6 +1,6 @@
 <?php
 
-  if ($level == "receptionist") {
+  if ($level == "receptionist" || $level == "admin") {
     $queryReserve = mysqli_query($koneksi, "SELECT * FROM pesanan JOIN users ON pesanan.tamu_id=users.tamu_id ORDER BY pesanan.tanggal_pesan DESC");
   } else {
     $queryReserve = mysqli_query($koneksi, "SELECT * FROM pesanan JOIN users ON pesanan.tamu_id=users.tamu_id WHERE pesanan.tamu_id='$guest_id' ORDER BY pesanan.tanggal_pesan DESC");

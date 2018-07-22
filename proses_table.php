@@ -6,14 +6,14 @@
 
   $nama_pemesan = $_POST["nama_pemesan"];
   $nomor_telepon = $_POST["nomor_telepon"];
-  $jumlah = $_POST["jumlah"];
+  $tanggal = $_POST["tanggal"];
   $alamat = $_POST["alamat"];
 
   $tamu_id = $_SESSION['tamu_id'];
   $waktu_saat_ini = date("Y-m-d H:i:s");
 
-  $query = mysqli_query($koneksi, "INSERT INTO pesan_table (nama_pemesan, tamu_id, nomor_telepon, jumlah, alamat, tanggal_pesan)
-                                               VALUES ('$nama_pemesan', '$tamu_id', '$nomor_telepon', '$jumlah', '$alamat', '$waktu_saat_ini')");
+  $query = mysqli_query($koneksi, "INSERT INTO pesan_table (nama_pemesan, tamu_id, nomor_telepon, tanggal, alamat, tanggal_pesan)
+                                               VALUES ('$nama_pemesan', '$tamu_id', '$nomor_telepon', '$tanggal', '$alamat', '$waktu_saat_ini')");
 
   if ($query) {
     $last_pesanan_id = mysqli_insert_id($koneksi);
@@ -30,6 +30,6 @@
                                               VALUES ('$last_pesanan_id', '$meja_id', '$nomor', '$kapasitas', '$tipeMeja')");
       }
     unset($_SESSION["reserve"]);
-    header("location:".BASE_URL."index.php?page=myprofile&module=invoice&action=detailTable&reserve_id=$last_pesanan_id");
+    header("location:".BASE_URL."index.php?page=myprofile&module=table&action=detailTable&reserve_id=$last_pesanan_id");
                                                }
  ?>

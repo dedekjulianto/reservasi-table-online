@@ -31,5 +31,5 @@
       }
     unset($_SESSION["reserve"]);
     header("location:".BASE_URL."index.php?page=myprofile&module=table&action=detailTable&reserve_id=$last_pesanan_id");
-                                               }
+  }
  ?>

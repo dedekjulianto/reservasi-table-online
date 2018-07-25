@@ -41,7 +41,14 @@ $nomor_telepon = $row['nomor_telepon'];
 $alamat = $row['alamat'];
 $nama = $row['nama'];
 $tanggal = $row['tanggal'];
- ?>
+
+
+$queryDetail = mysqli_query($koneksi, "SELECT invoice_table.*, meja.nomor FROM invoice_table JOIN meja ON invoice_table.meja_id=meja.meja_id WHERE id_pesanan='$reserve_id'");
+$rowDetail=mysqli_fetch_assoc($queryDetail);
+$nomor = $rowDetail['nomor'];
+$kapasitas = $rowDetail['kapasitas'];
+
+?>
 
 <style type="text/css">
 p{
@@ -122,6 +129,16 @@ tbody tr:nth-child(odd) {
 		<td>:</td>
 		<td><?php echo $tanggal ?></td>
 	</tr>
+  <tr>
+    <td>Nomor Meja</td>
+    <td>:</td>
+    <td><?php echo $nomor ?></td>
+  </tr>
+  <tr>
+    <td>Kapasitas</td>
+    <td>:</td>
+    <td><?php echo $kapasitas." "."Orang";?></td>
+  </tr>
 </table>
 
 <!-- <p align="left">Tanggal: <?php date_default_timezone_set("Asia/Jakarta"); echo $date = date('Y-m-d |  H:i:s'); ?> </p> -->

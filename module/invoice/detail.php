@@ -11,6 +11,11 @@
   $alamat = $row['alamat'];
   $nama = $row['nama'];
   $tanggal = $row['tanggal'];
+
+  $queryDetail = mysqli_query($koneksi, "SELECT invoice_table.*, meja.nomor FROM invoice_table JOIN meja ON invoice_table.meja_id=meja.meja_id WHERE id_pesanan='$reserve_id'");
+  $rowDetail=mysqli_fetch_assoc($queryDetail);
+  $nomor = $rowDetail['nomor'];
+  $kapasitas = $rowDetail['kapasitas'];
 ?>
 <div ="frame-faktur">
   <h3><center>Detail Order</center></h3>
@@ -51,6 +56,16 @@
       <td>Tanggal Booking</td>
       <td>:</td>
       <td><?php echo $tanggal ?></td>
+    </tr>
+    <tr>
+      <td>Nomor Meja</td>
+      <td>:</td>
+      <td><?php echo $nomor ?></td>
+    </tr>
+    <tr>
+      <td>Kapasitas</td>
+      <td>:</td>
+      <td><?php echo $kapasitas." "."Orang";?></td>
     </tr>
   </table>
 </div>

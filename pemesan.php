@@ -1,4 +1,13 @@
+<?php
+  if ($guest_id == false ) {
+    $_SESSION["proses_table"] = true;
+    header("location: ".BASE_URL."index.php?page=myprofile");
+    exit;
+  }
 
+  $menu = isset($_SESSION['menu']) ? $_SESSION['menu'] : array();
+  $button = "Submit";
+?>
 <div id="frame-data-pemesan">
   <h3 class="label-data-pemesan">Detail Reserve Table</h3>
   <div id="frame-form-pengirim">
@@ -61,4 +70,10 @@
   if ($button) {
     $query = mysqli_query($koneksi, "UPDATE meja SET status='off' WHERE meja_id='$meja_id' ");
   }
+ ?>
+
+ <?php
+ //if ($button == "Submit") {
+ //     mysqli_query($koneksi, "UPDATE menu SET stok=stok-$quantity WHERE id_menu='$id_menu'");
+ // }
  ?>

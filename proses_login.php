@@ -20,8 +20,8 @@
     $_SESSION['tamu_id'] = $row['tamu_id'];
     $_SESSION['nama'] = $row['nama'];
     $_SESSION['level'] = $row['level'];
-    if (isset($_SESSION["proses_pemesan"])) {
-      unset($_SESSION["proses_pemesan"]);
+    if (isset($_SESSION["data_pemesan"])) {
+      unset($_SESSION["data_pemesan"]);
       header("location:".BASE_URL."index.php?page=data_pemesan");
     } else {
       header("location:".BASE_URL."index.php?page=myprofile");

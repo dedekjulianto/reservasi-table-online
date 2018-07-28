@@ -105,6 +105,7 @@
 <div id="frame-keterangan">
   <p>Silahkan datang tepat waktu<br/>
      Customer Service : 0000-9999-8888<br/>
+     Silahkan lakukan pembatalan <a href="<?php echo BASE_URL."index.php?page=myprofile&module=table&action=status&id_pesanan=$row[id_pesanan]"?>">Disini</a>
   </p>
 </div>
 <div id="frame-tambah">

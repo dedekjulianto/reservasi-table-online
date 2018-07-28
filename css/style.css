@@ -444,7 +444,6 @@ h3.label-data-pemesan {
     vertical-align:  top;
 }
 
-
 .update-quantity {
     width:  30px;
     text-align:  center;
@@ -463,8 +462,12 @@ h3.label-data-pemesan {
     color:  #1e5474;
 }
 
-
 #menu #frame-menu ul li img {
     margin-bottom:  10px;
     width: 226px;
+}
+
+.atas {
+    margin-top:  15px;
+    float: right;
 }
